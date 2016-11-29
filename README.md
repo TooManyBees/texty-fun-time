@@ -1,4 +1,4 @@
-# Mosaic
+# Texty Fun Time 😙
 
 Do you like words? No, scratch that. Not words, letters. Do you like letters, (characters, graphemes, _motherfucking sigils_, et goddamn cetera) but wish they weren't so unfairly constrained into words? Those fucking oppressive prison cells of grammar, that's what I think of words. Who needs em! Not me.
 

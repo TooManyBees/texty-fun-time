@@ -38,7 +38,7 @@ function draw(canvas, _options) {
 
   ctx.textAlign = "center";
   ctx.textBaseline = "middle";
-  ctx.fillStyle = 'rgb(253, 120, 168)';
+  ctx.fillStyle = options.color;
 
   for (var i = 0; i < options.count; i++) {
     drawCharacter(ctx, i, options);

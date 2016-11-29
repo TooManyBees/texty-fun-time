@@ -15,6 +15,7 @@ var MAGNIFICENT_ARTWORKS = require('texty-fun-time');
 var canvas = new Canvas(512, 512);
 MAGNIFICENT_ARTWORKS.draw(canvas, {
   text: "ooh mickey you're so pretty can't you understand",
+  color: 'rgb(253, 120, 168)',
   density: 2,
   startCentered: false,
   sizing: "random",
@@ -24,6 +25,8 @@ MAGNIFICENT_ARTWORKS.draw(canvas, {
 ![My karaoke playlist was on when I wrote this](itsguyslikeyoumickey.png)
 
 TextFunTime places letters where there is the least opacity on the canvas, so passing a canvas that already contains opaque (or partially opaque) pixels can create unexpected results.
+
+`color` can be any [color string](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value), gradient, or pattern that works with the canvas context's `fillStyle` property.
 
 `sizing` can be one of `"random"`, `"linear"`, and `"logarithmic"`, which determines how subsequent letters are scaled down in size.
 

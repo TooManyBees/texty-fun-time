@@ -22,6 +22,10 @@ MAGNIFICENT_ARTWORKS.draw(canvas, {
 
 ![My karaoke playlist was on when I wrote this](itsguyslikeyoumickey.png)
 
+TextFunTime places letters where there is the least opacity on the canvas, so passing a canvas that already contains opaque (or partially opaque) pixels can create unexpected results.
+
+`density` is dangerous: it increases the number of painted letters exponentially, i.e. `ooh mickey you're so pretty can't you understand` is 48 characters, so this image has 2,304 chars on it.
+
 # Terms of Use
 
 This software is offered under the BITE-ME license, wherein you can do whatever the fuck you want with it, but if you @ me I will drive to your home and say mean words to you as I flick you in the eye.

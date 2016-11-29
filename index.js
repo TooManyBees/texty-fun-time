@@ -19,7 +19,12 @@ function defaultOptions(_options) {
     count = Math.pow(count, _options.density);
   }
 
-  return Object.assign({ color: 'rgb(253, 120, 168)', startCentered: true, count: count }, _options, { text: text });
+  var sizing = 'random';
+  if (['random', 'linear', 'logarithmic'].indexOf(_options.sizing) >= 0) {
+    sizing = _options.sizing;
+  }
+
+  return Object.assign({ color: 'rgb(253, 120, 168)', startCentered: true, count: count }, _options, { text: text, sizing: sizing });
 }
 
 function draw(canvas, _options) {
@@ -53,11 +58,15 @@ function sizeFn1(i, options) {
 function sizeFn2(i, options) {
   return (options.shortDimension / 3 * (1 - Math.log(i+1) / Math.log(options.count))) + 10;
 }
-var sizeFns = [sizeFn0, sizeFn1, sizeFn2];
+var sizeFns = {
+  random: sizeFn0,
+  linear: sizeFn1,
+  logarithmic: sizeFn2,
+};
 
 // original draw function
 function drawCharacter(ctx, i, options) {
-  var fontSize = sizeFn0(i, options);
+  var fontSize = sizeFns[options.sizing](i, options);
   ctx.save();
   ctx.font = "" + fontSize + "px courier";
   var emptySpot;

@@ -17,12 +17,15 @@ MAGNIFICENT_ARTWORKS.draw(canvas, {
   text: "ooh mickey you're so pretty can't you understand",
   density: 2,
   startCentered: false,
+  sizing: "random",
 });
 ```
 
 ![My karaoke playlist was on when I wrote this](itsguyslikeyoumickey.png)
 
 TextFunTime places letters where there is the least opacity on the canvas, so passing a canvas that already contains opaque (or partially opaque) pixels can create unexpected results.
+
+`sizing` can be one of `"random"`, `"linear"`, and `"logarithmic"`, which determines how subsequent letters are scaled down in size.
 
 `density` is dangerous: it increases the number of painted letters exponentially, i.e. `ooh mickey you're so pretty can't you understand` is 48 characters, so this image has 2,304 chars on it.
 

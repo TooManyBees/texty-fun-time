@@ -12,9 +12,15 @@ So why bother making word art. Boring 1997 Microsoft Word plugin word art. Lame 
 var Canvas = require('canvas'); // if running in Node
 var MAGNIFICENT_ARTWORKS = require('texty-fun-time');
 
-var canvas = new Canvas(1000, 1000);
-MAGNIFICENT_ARTWORKS.draw(canvas, { text: "ooh mickey you're so pretty can't you understand" });
+var canvas = new Canvas(512, 512);
+MAGNIFICENT_ARTWORKS.draw(canvas, {
+  text: "ooh mickey you're so pretty can't you understand",
+  density: 2,
+  startCentered: false,
+});
 ```
+
+![My karaoke playlist was on when I wrote this](itsguyslikeyoumickey.png)
 
 # Terms of Use
 

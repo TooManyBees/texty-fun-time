@@ -1,35 +1,28 @@
-var Canvas = require('canvas');
 var findEmptySpot = require('./find_empty_spot.js');
 
 var UNDEFINED = "undefined";
 function defaultOptions(_options) {
-  var characters = _options.characters;
-  if (typeof _options.characters === UNDEFINED) {
-    characters = ['W'];
+  var text = _options.text;
+  if (typeof _options.text === UNDEFINED) {
+    text = ['W'];
   }
-  if (typeof characters === "string") {
-    characters = characters.replace(/[\W_]/g, '');
-    characters = characters.split('');
+  if (typeof text === "string") {
+    text = text.replace(/[\W_]/g, '');
+    text = text.split('');
   }
-  if (!Array.isArray(characters) || characters.length === 0) {
-    throw "Invalid characters "+_options.characters;
+  if (!Array.isArray(text) || text.length === 0) {
+    throw "Invalid text "+_options.text;
   }
 
-  var count = characters.length;
+  var count = text.length;
   if (typeof _options.density === "number") {
     count = Math.pow(count, _options.density);
   }
 
-  return Object.assign({ color: 'rgb(253, 120, 168)', startCentered: true, count: count }, _options, { characters: characters });
+  return Object.assign({ color: 'rgb(253, 120, 168)', startCentered: true, count: count }, _options, { text: text });
 }
 
-function draw(w, h, options) {
-  var canvas = new Canvas(w, h);
-  drawToCanvas(canvas, options);
-  return canvas;
-}
-
-function drawToCanvas(canvas, _options) {
+function draw(canvas, _options) {
   var options = defaultOptions(_options);
   options = Object.assign({ w: canvas.width, h: canvas.height, shortDimension: Math.min(canvas.height, canvas.width) }, options);
   var ctx = canvas.getContext('2d');
@@ -75,7 +68,7 @@ function drawCharacter(ctx, i, options) {
   }
   ctx.translate(emptySpot.x, emptySpot.y);
   ctx.rotate(Math.random() * Math.PI * 2);
-  ctx.fillText(sample(options.characters), 0, 0);
+  ctx.fillText(sample(options.text), 0, 0);
   ctx.restore();
 }
 
@@ -85,5 +78,4 @@ function sample(arr) {
 
 module.exports = {
   draw: draw,
-  drawToCanvas: drawToCanvas,
 };

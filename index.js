@@ -24,7 +24,7 @@ function defaultOptions(_options) {
     sizing = _options.sizing;
   }
 
-  return Object.assign({ color: 'rgb(253, 120, 168)', startCentered: true, count: count }, _options, { text: text, sizing: sizing });
+  return Object.assign({ color: 'rgb(253, 120, 168)', font: 'courier', startCentered: true, count: count }, _options, { text: text, sizing: sizing });
 }
 
 function draw(canvas, _options) {
@@ -68,7 +68,7 @@ var sizeFns = {
 function drawCharacter(ctx, i, options) {
   var fontSize = sizeFns[options.sizing](i, options);
   ctx.save();
-  ctx.font = "" + fontSize + "px courier";
+  ctx.font = "" + fontSize + "px "+ options.font;
   var emptySpot;
   if (options.startCentered && i === 0) {
     emptySpot = { x: options.w/2, y: options.h/2, opacity: 0 };

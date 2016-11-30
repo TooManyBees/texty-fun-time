@@ -1,10 +1,10 @@
 # Texty Fun Time 😙
 
-Do you like words? No, scratch that. Not words, letters. Do you like letters, (characters, graphemes, _motherfucking sigils_, et goddamn cetera) but wish they weren't so unfairly constrained into words? Those fucking oppressive prison cells of grammar, that's what I think of words. Who needs em! Not me.
+Do you like words? No, scratch that. Not words, letters. Do you like letters, (characters, graphemes, _motherfucking sigils_, et goddamn cetera) but wish they weren't so unfairly constrained into words? Those oppressive prison cells of grammar, that's what I think of words. Who needs em! Not me. Haven't used one in years, and good riddence!
 
-So why bother making word art. Boring 1997 Microsoft Word plugin word art. Lame "256-color, curved across the arc of a circle, then shat upon by a dithered drop shadow" word art. When you could make a text mosaic.
+So why bother making word art. Boring 1997 Microsoft Word plugin word art. Dumb "256-color, curved across the arc of a circle, then shat upon by a dithered drop shadow" word art. When you could make a text mosaic.
 
-(Obv I spent most of my youth playing with MS Word word art, because who wouldn't have given the opportunity.)
+(Obv I spent most of my youth playing with MS Word word art, because hot dang that was the coolest.)
 
 # HOW DOES?
 
